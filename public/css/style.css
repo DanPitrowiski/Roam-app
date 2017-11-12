@@ -158,7 +158,7 @@ input:active {
 }
 
 #image-1 {
-  background-image: url("https://drscdn.500px.org/photo/172908113/w%3D440_h%3D440/v2?client_application_id=43831&webp=true&v=3&sig=999be0be6718d9393d24dd82c9316737c88864470f360a2458ebefd16b632889");
+  background-image: url("https://media.architecturaldigest.com/photos/56f45781904aa1ac0ac46eec/2:1/w_2560/rio-de-janeiro-lede.jpg");
 }
 
 .image:hover .img-hover {
@@ -179,11 +179,6 @@ input:active {
   top: 150px;
   font-size: 36px;
 }
-
-/*.wrapper {
-  width: 440px;
-  height: 350px;
-}*/
 
 
 /*
