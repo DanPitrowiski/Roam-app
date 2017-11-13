@@ -41,8 +41,8 @@
 				</form>
 			</div>
 		  <ul class="alignright links">
-		    <li><a href="">DISCOVER</a></li>
-		    <li><a href="">PROFILE</a></li>
+		    <li><a class="discover" href="">DISCOVER</a></li>
+		    <li><a class="profile" href="">PROFILE</a></li>
 		  </ul>
 		</nav>
 	</header>
@@ -55,11 +55,24 @@
 			<a href="#" id="login">Load Image</a>
 		</button> -->
 	</div>
-	<div class="images">
-		<div class="wrapper image" id="image-1">
-			<div class="img-hover">
-				<h2>Brazil</h2>
+	<div id="discover">
+		<div class="images">
+			<div class="wrapper image" id="image-1">
+				<div class="img-hover">
+					<h2>Brazil</h2>
+					<button class="btn fav">Add to Favorites</button>
+				</div>
 			</div>
+		</div>
+	</div>
+	<div id="profile" class="hide">
+		<div class="hero">
+			<div class="hero-cover grad">
+				<h2>Brazil</h2>
+				<div class="profile-pic"></div>
+			</div>
+		</div>
+		<div class="user-images">
 		</div>
 	</div>
 

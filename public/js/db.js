@@ -11,40 +11,35 @@ firebase.initializeApp(config);
 let firebaseDatabase = firebase.database();
 
 function addNewFavorite(location){
-	let favorite = location;
 	let favoriteReference = firebaseDatabase.ref('favorite_places');
 	favoriteReference.push({
 		favorite_places: location,
 	});
-	getFavorites();
+	// getFavorites();
 }
 
-function getPosts(){
+function getFavorites(){
 	firebaseDatabase.ref('favorite_places').on('value', function(results){
-		let $messageBoard = $('.message-board');
-		let places = [];
-		let allPlaces = results.val();
-		for (let place in allPlaces){
-			// $deleteElement.on('click', function(event){
-			// 	let id = $(event.target.parentNode).data('id');
-			// 	deleteMessage(id);
-			// });
-			function loadImage(place);
-			// let target = ("#image-"+globalIndex).parentNode;
-			let $placeListElement = $("#image-"+globalIndex.parentNode));
-			$placeListElement.attr('data-id', msg);
+		let locations = [];
+		let allLocations = results.val();
+		for (let locations in allLocations){
+			function loadImage(place, userImages);
+			let $('#image-'+globalIndex).attr('data-id', msg);
+			$deleteFavorite.on('click', function(event){
+				let id = $(event.target.parentNode).data('id');
+				deleteFavorite(id);
+			})
 		}
 	})
 }
 
-function updateMessage(id, votes) {
-	let messageReference = firebaseDatabase.ref('messages').child(id);
-	messageReference.update({
-		votes: votes,
-	});
-}
+// function addFavorite(id) {
+// 	let favoriteReference = firebaseDatabase.ref('messages').child(id);
+// 	messageReference.add({
+// 	});
+// }
 
-function deleteMessage(id, votes) {
-	let messageReference = firebaseDatabase.ref('messages').child(id);
-	messageReference.remove();
+function deleteFavorite(id) {
+	let favoriteReference = firebaseDatabase.ref('messages').child(id);
+	favoriteReference.remove();
 }
