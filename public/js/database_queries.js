@@ -12,6 +12,7 @@ firebase.initializeApp(config);
 
 let firebaseDatabase = firebase.database();
 
+// Add a new favorite location
 function addNewFavorite(place){
 	let favoriteReference = firebaseDatabase.ref('favorite_places');
 	favoriteReference.push({
@@ -19,6 +20,7 @@ function addNewFavorite(place){
 	});
 }
 
+// Load locations in your profile
 function getFavorites(){
 	debugger;
 	firebaseDatabase.ref('favorite_places').on('value', function(results){
@@ -31,23 +33,10 @@ function getFavorites(){
 			console.log("Locations:", locations);
 		}
 	})
-	// let $removeButton = $('.remove');
-	// $removeButton.on('click', function(event){
-	//     let id = $(event.target.parentNode.parentNode).data('id');
-	//     deleteFavorite(id);
-	// });
-	// let $favButton = $('.fav');
-	// $favButton.on('click', function(e){
-	//     debugger;
-	//     let hideThis = $(this.parentNode.parentNode);
-	//     let place = $(this).siblings("h2").text();
-	//     addNewFavorite(place);
-	//     $(hideThis).hide();
-	// });
 }
 
-
+// From the Profile, delete locations
 function deleteFavorite(id) {
-	let favoriteReference = firebaseDatabase.ref('favorite_places').child(id).once(value);
+	let favoriteReference = firebaseDatabase.ref('favorite_places').child(id);
 	favoriteReference.remove();
 }

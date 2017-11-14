@@ -4,6 +4,7 @@ let dataID = "";
 let removeButton = "<button class='btn remove'>Remove from favorites</button>";
 let addButton = "<button class='btn fav'>Add to favorites</button>";
 
+// Loading all the images you see
 function loadImage(location, htmlLocation, buttonOpt, dataID){
 
     let searchOptions = {
@@ -21,17 +22,11 @@ function loadImage(location, htmlLocation, buttonOpt, dataID){
         $('#image-'+globalIndex).css( "background-image", 'url(' + response.data.photos[imageRandom].image_url + ')');
         globalIndex++;
 
+        // Adding an Event Listener for the Profile
         $('.remove').on('click', function(event){
             let id = $(event.target.parentNode.parentNode).data('id');
             deleteFavorite(id);
         });
-        // $('.fav').on('click', function(e){
-        //     debugger;
-        //     let hideThis = $(this.parentNode.parentNode);
-        //     let place = $(this).siblings("h2").text();
-        //     addNewFavorite(place);
-        //     $(hideThis).hide();
-        // });
     });
 
 }
