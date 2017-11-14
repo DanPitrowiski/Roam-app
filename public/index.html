@@ -46,51 +46,38 @@
 		  </ul>
 		</nav>
 	</header>
-
-	<div class="clear clearfix buttons">
-		<button class="btn login btn-default">
-			<a href="#" id="login">Login to 500px</a>
-		</button>
-<!-- 		<button class="btn btn-default load-image">
-			<a href="#" id="login">Load Image</a>
-		</button> -->
-	</div>
-	<div id="discover">
-		<div class="images">
-			<div class="wrapper image" id="image-1">
-				<div class="img-hover">
-					<h2>Brazil</h2>
-					<button class="btn fav">Add to Favorites</button>
+	<div class="container">
+		<div class="clear clearfix buttons">
+			<button class="btn login btn-default">
+				<a href="#" id="login">Login to 500px</a>
+			</button>
+		</div>
+		<div id="discover">
+			<div class="images">
+				<!-- <div class="wrapper image" id="image-1">
+					<div class="img-hover">
+						<h2>Brazil</h2>
+						<button class="btn fav ">Add to Favorites</button>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div id="profile" class="hide">
+			<div class="hero">
+				<div class="hero-cover grad">
+					<h2></h2>
+					<div class="profile-pic"></div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div id="profile" class="hide">
-		<div class="hero">
-			<div class="hero-cover grad">
-				<h2>Brazil</h2>
-				<div class="profile-pic"></div>
+			<div class="user-images">
 			</div>
-		</div>
-		<div class="user-images">
 		</div>
 	</div>
 
 	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-	    apiKey: "AIzaSyBZROBBmYcZZ9OZyIB-PHZWv0YC3fN1qy0",
-	    authDomain: "roam-worldwide-app.firebaseapp.com",
-	    databaseURL: "https://roam-worldwide-app.firebaseio.com",
-	    projectId: "roam-worldwide-app",
-	    storageBucket: "",
-	    messagingSenderId: "605133544638"
-	  };
-	  firebase.initializeApp(config);
-	</script>
 	<script src="/js/500px.js"></script>
+	<script src="/js/loadImages.js"></script>
 	<script src="/js/app.js"></script>
-	<script src="/js/imageFinderFunction.js"></script>
+	<script src="/js/database_queries.js"></script>
 </body>
 </html>
